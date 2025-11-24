@@ -1,0 +1,274 @@
+@font-face {
+    font-family: jakarta;
+    src: url(./assets/fonts/PlusJakartaSans-VariableFont-wght.ttf);
+}
+
+:root{
+    --lilac: #666CA3;
+    --violet: #13183f;
+    --gray: #83869a;
+    --pink: #f74780;
+    --palepink: #ffa7c3;
+    --white: #ffffff;
+    --gradient-orange: linear-gradient(#ff6f48, #f02aa6);
+    --gradient-purple: linear-gradient(#4851ff, #f02aa6);
+}
+
+body{
+    font-size: 16px;
+    font-family: jakarta;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 8%;
+    width: 78%;
+}
+
+.button1{
+    background-color: var(--violet);
+    color: var(--white);
+    font-family: jakarta;
+    border-radius: 3rem;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.button1:hover{
+    background-color: var(--lilac);
+    cursor: pointer;
+    border: 1px solid var(--lilac);
+}
+
+/*****************************MAIN****************/
+
+
+.top{
+    box-sizing: border-box;
+    display: flex;
+    margin: 2% 8%;
+    width: 100%;
+    align-items: center;
+}
+
+picture{
+    z-index: -1;
+    margin-top: -22%;
+    /* margin-left: 10%; */
+}
+
+h1{
+    color: var(--violet);
+    font-size: 3rem;
+    font-weight: bolder;
+    width: 16ch;
+    margin-top: 2rem;
+}
+
+.h1-text{
+    color: var(--lilac);
+    width: 35ch;
+}
+
+.button2{
+    background: var(--gradient-orange);
+    color: var(--white);
+    font-family: jakarta;
+    border-radius: 3rem;
+    padding: 1.1rem 2.2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    border: 1px solid transparent;
+}
+
+.button2:hover{
+    background: var(--gradient-orange);
+    opacity: 70%;
+    cursor: pointer;
+}
+
+/**************COURSES*****************/
+.mid-courses{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2% 8%;
+}
+
+.course{
+    border-radius: 1rem;
+    box-shadow: 0.5px 0.5px 1.5px 0px #dad2d2;
+    padding: 1rem;
+    width: 25%;
+    margin-top: 5%;
+    
+
+}
+
+.course img{
+    position: relative;
+    top: -13%;
+    left: 10%;
+}
+
+.course svg{
+    margin-top: -15%;
+    margin-left: 5%;
+}
+
+
+.course h4{
+    font-size: 1.1rem;
+    color: var(--violet);
+}
+
+.course p{
+    color: var(--gray);
+}
+
+.course a{
+    color: var(--pink);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.course:first-child{
+    background: var(--gradient-orange);
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
+/*********************FOOTER*****************/
+.footer{
+    display: flex;
+    background-color: var(--violet);
+    justify-content: space-between;
+    padding: 2% 15% 2% 8%;
+    width: 78%;
+}
+
+.button-div{
+    display: grid;
+}
+
+.button3{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    background: linear-gradient(#4851ff, #f02aa6);
+    color: var(--white);
+    font-family: jakarta;
+    border-radius: 3rem;
+    padding: 1.1rem 2.2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    z-index: 10;
+}
+
+.button4{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    background-color: white;
+    color: var(--white);
+    font-family: jakarta;
+    border-radius: 3rem;
+    padding: 1.1rem 2.2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+}
+
+.light-logo{
+    margin-top: 1rem;
+}
+
+.button3:hover{
+    background: var(--gradient-purple);
+    opacity: 50%;
+    cursor: pointer;
+}
+
+/**********************MEDIA*QUERY**************************/
+
+@media screen and (min-width: 1534px) {
+    header{
+        width: 70%;
+    }
+    
+    picture{
+        margin-top: -16%;
+        margin-left: 13%;
+    }
+
+    footer{
+        width: 70%;
+    }
+     
+}
+
+/********TABLET********/
+
+@media only screen and (max-width: 1214px) and (min-width: 800px){
+    
+   h1{
+    font-size: 2.5rem;
+   }
+
+   picture{
+    margin-top: -17%;
+    margin-left: -13%;
+}
+   
+    .course{
+        width: 40%;
+        margin-top: 6%;
+    }
+}
+
+
+/********MOBILE*******/
+
+@media only screen and (max-width: 799px){
+    .top{
+        /* display: block; */
+        flex-direction: column;
+        width: fit-content;
+        justify-content: space-around;
+        margin: auto;
+    }
+
+    h1{
+        font-size: 2.2rem;
+        font-weight: 800;
+        /* width: 30ch; */
+    }
+
+    .h1-text{
+        width: 25ch;
+    }
+
+    picture{
+        margin: 0;
+    }
+
+    .course{
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    .button1, .button2, .button3{
+        font-size: 12px;
+        padding: 2% 5%;
+        font-weight: 600;
+    }
+    .button2{
+        padding: 3% 6%;
+    }
+
+}
+
